@@ -1,0 +1,10 @@
+<h4>All existing note will be list below</h4>
+<div *ngIf='showAll'>
+  <div *ngFor='let  n of showAll'>
+    <p>Content:{{ n.note | json }}</p>
+    <p>Created At:{{ n.createdAt | date: 'medium' }}</p>
+
+  </div>
+</div>
+
+<!-- <p>Date:{{note.created_at}}</p> -->

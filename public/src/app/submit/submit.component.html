@@ -1,0 +1,9 @@
+<h2>Add a Note</h2>
+
+<p *ngIf='regForm.invalid' [ngStyle]="{'color': 'red'}">Submit button is disabled before quote is entered with minmm length of 4 chatacter</p>
+
+<form (submit)="onSubmit()" #regForm='ngForm' >
+  Note: <input name='note' type="text" required minlength="4" [(ngModel)]="inputNote.note"/>
+  <input class='green' [disabled]='regForm.invalid' type="submit" value="Add Note">
+</form>
+<hr>
